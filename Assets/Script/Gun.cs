@@ -21,23 +21,27 @@ using UnityEngine;
 //    }
 //}
 
-public class Shoot : MonoBehaviour
+public class Gun : MonoBehaviour
 {
     [SerializeField] private Transform shootingPoint; // Mettre sur Unity là ou le projectile va spawn 
     [SerializeField] private GameObject bulletPrefab; // Mettre sur Unity l'objet qu'on va faire spawn(donc notre projectile)
     [SerializeField] private float speed = 5; // Vitesse du projectile
-
-    private SpriteRenderer sr; //SpriteRenderer du GameObject  
+    
+    [SerializeField]private SpriteRenderer sr; //SpriteRenderer du GameObject  
 
     // Start is called before the first frame update
     void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button5)) // Si on appuie sur le bouton ("Fire1") 
+        {
+            shoot(); //on lance shoot()
+        }
 
         if (Input.GetButtonDown("Fire1")) // Si on appuie sur le bouton ("Fire1") 
         {

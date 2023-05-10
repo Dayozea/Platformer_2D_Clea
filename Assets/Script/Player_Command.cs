@@ -16,13 +16,16 @@ public class Player_Command : MonoBehaviour
     public bool flip;
     private Rigidbody2D rb;
     private bool isGrounded = false;
+    [SerializeField] private float gravity;
+    [SerializeField] private SpriteRenderer sr;
 
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 3;
+        rb.gravityScale = gravity;
         flip = true;
+
     }
 
     void Update()
@@ -40,17 +43,26 @@ public class Player_Command : MonoBehaviour
             if (moveInput > 0)
             {
                 flip = true;
+                sr.flipX = false;
                 transform.localScale = new Vector2(3.7f, 3.7f); // tourne le personnage à droite
             }
             else
             {
                 flip = false;
+                sr.flipX = true;
                 transform.localScale = new Vector2(-3.7f, 3.7f); // tourne le personnage à gauche
             }
         }
 
 
+
+
         // saut
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button0) && isGrounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
