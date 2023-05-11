@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7604678347529878120}
   - component: {fileID: 2135822539102072791}
   - component: {fileID: -8252456933903371127}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Balle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,6 +127,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifetime: 2
   damage: 10
+  Obstacle_Layer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &-8252456933903371127
 Rigidbody2D:
   serializedVersion: 4
