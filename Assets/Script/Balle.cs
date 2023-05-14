@@ -25,17 +25,17 @@ public class Balle : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-
         HealthEnemy Pv = collision.gameObject.GetComponent<HealthEnemy>();
-
         if (Pv != null)
         {
             Pv.TakeDamage(damage);
         }
-        if (Obstacle)
-        {
-             Destroy(gameObject);
-        }
+        //if (collision.gameObject.layer == Obstacle_Layer)
+        //{
+            Destroy(gameObject);
+        //}
+           
+
         
     }
 }
