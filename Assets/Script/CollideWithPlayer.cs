@@ -21,7 +21,7 @@ public class CollideWithPlayer : MonoBehaviour
         Debug.Log("coucou");
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponentInChildren<HealthEnemy>().CurrentHealth += 10;
+            collision.gameObject.GetComponentInChildren<playerHealth>().CurrentHealth += 10;
             Destroy(gameObject);
         }
     }
