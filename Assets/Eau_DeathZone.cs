@@ -5,11 +5,13 @@ using UnityEngine;
 public class Eau_DeathZone : MonoBehaviour
 {
     [SerializeField] private int Degat_Eau;
-    private void OnTriggerEnter(Collider player)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (player.CompareTag("Player")==true)
+        if (collision.gameObject.CompareTag("Player") == true)
         {
-            player.GetComponent<playerHealth>().TakeDamage(Degat_Eau);
+            Debug.Log("rrr");
+            collision.gameObject.GetComponent<playerHealth>().TakeDamage(Degat_Eau);
         }
     }
 }
