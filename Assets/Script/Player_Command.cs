@@ -19,12 +19,15 @@ public class Player_Command : MonoBehaviour
     [SerializeField] private float gravity;
     [SerializeField] private SpriteRenderer sr;
 
+    Animator Anim;
+
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = gravity;
         flip = true;
+        Anim = GetComponent<Animator>();
 
     }
 
@@ -36,6 +39,23 @@ public class Player_Command : MonoBehaviour
         // déplacement horizontal
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
+
+        if (rb.velocity.y < 0)
+        {
+            Anim.SetBool("Fall", true);
+        } 
+        else
+        {
+            Anim.SetBool("Fall", false);
+        }
+
+        if (moveInput != 0)
+        {
+            Anim.SetBool("Walk", true);
+        } else
+        {
+            Anim.SetBool("Walk", false);
+        }
 
         // Turn
         if (moveInput != 0)
@@ -61,10 +81,12 @@ public class Player_Command : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button0) && isGrounded)
         {
+            Anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            Anim.SetTrigger("Jump");
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
