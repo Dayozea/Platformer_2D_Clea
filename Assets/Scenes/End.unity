@@ -350,7 +350,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41, type: 3}
     m_FontSize: 34
     m_FontStyle: 0
     m_BestFit: 0
@@ -444,7 +444,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ListDialogue:
-  - aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazazazazazazazazazazazazazazazaz
+  - BAD ENDING
+  - 'Alma is now mourning her brother alone in a silent jungle with blood on her
+    hands '
+  - "Wait\u2026 does it really have\u2026 to end up like this? "
+  - "Killing is not always the solution\u2026  "
+  - GOOD ENDING
+  - "Alma saved her brother, they return to their home, but now they go on expedition
+    together\u2026  "
   txt: {fileID: 1440621587}
   End: 1
 --- !u!114 &1529078864
@@ -688,7 +695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Click for continue
+  m_Text: Click to continue
 --- !u!222 &2000638248
 CanvasRenderer:
   m_ObjectHideFlags: 0
