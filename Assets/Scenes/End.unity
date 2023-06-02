@@ -217,7 +217,6 @@ RectTransform:
   m_Children:
   - {fileID: 1955116924}
   - {fileID: 1440621589}
-  - {fileID: 2000638246}
   - {fileID: 1529078862}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -351,7 +350,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41, type: 3}
-    m_FontSize: 34
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -362,7 +361,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Text
+  m_Text: "GOOD ENDING: Alma saved her brother, they return to their home, but now
+    they go on expedition together\u2026\r\n\r\nkilling is not always the solution,
+    but unfortunately sometimes, we can\u2019t avoid it\u2026\r\n\r\nBAD ENDING:\n\nAlma
+    is now mourning her brother alone in a silent jungle with blood on her hands\r\n\r\nWait\u2026
+    does it really have\u2026 to end up like this?\r\n\nkilling is not always the
+    solution, but unfortunately sometimes, we can\u2019t avoid it\u2026\r\n\n\n\r\n"
 --- !u!222 &1440621588
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -380,16 +384,16 @@ RectTransform:
   m_GameObject: {fileID: 1440621586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.52, y: 1.98, z: 1.037037}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 403928297}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -96.2}
-  m_SizeDelta: {x: 783.4, y: 176.39}
+  m_AnchorMax: {x: 0.51914483, y: 0.66336507}
+  m_AnchoredPosition: {x: -7.5, y: -41}
+  m_SizeDelta: {x: 768.4, y: 104.39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1529078861
 GameObject:
@@ -424,7 +428,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 403928297}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -443,15 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1408054ab5f92204fb25ba0bc2ae23db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListDialogue:
-  - BAD ENDING
-  - 'Alma is now mourning her brother alone in a silent jungle with blood on her
-    hands '
-  - "Wait\u2026 does it really have\u2026 to end up like this? "
-  - "Killing is not always the solution\u2026  "
-  - GOOD ENDING
-  - "Alma saved her brother, they return to their home, but now they go on expedition
-    together\u2026  "
+  ListDialogue: []
   txt: {fileID: 1440621587}
   End: 1
 --- !u!114 &1529078864
@@ -623,84 +619,4 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1955116923}
-  m_CullTransparentMesh: 1
---- !u!1 &2000638245
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2000638246}
-  - component: {fileID: 2000638248}
-  - component: {fileID: 2000638247}
-  m_Layer: 5
-  m_Name: Tuto
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2000638246
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000638245}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 403928297}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -205.76}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2000638247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000638245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 24
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 300
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Click to continue
---- !u!222 &2000638248
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000638245}
   m_CullTransparentMesh: 1
