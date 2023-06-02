@@ -21,8 +21,9 @@ public class Attack_Collision : MonoBehaviour
     {
         if (collision.CompareTag("Player") == true)
         {
-            
-            anim.SetBool("Atk",true);
+
+
+            //anim.SetBool("Atk",true);
 
         }
     }

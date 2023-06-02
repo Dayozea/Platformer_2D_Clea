@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthBOSS : MonoBehaviour
 {
@@ -25,9 +26,21 @@ public class HealthBOSS : MonoBehaviour
         if (IsDead==true)
         {
             Destroy(gameObject);
-            Debug.Log(name + " Detruit");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Player") == true)
+        {
+            Debug.Log("PanPan");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
+    }
+
     public void TakeDamage(int Damage)
     {
         CurrentHealth = CurrentHealth - Damage;
