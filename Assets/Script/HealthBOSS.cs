@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealthEnemy : MonoBehaviour
+public class HealthBOSS : MonoBehaviour
 {
     private int Damage;
-    private int MaxHealth=50;
+    private int MaxHealth=200;
     bool IsDead = false;
 
     [SerializeField] public int CurrentHealth;

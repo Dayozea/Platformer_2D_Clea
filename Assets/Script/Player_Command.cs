@@ -40,13 +40,10 @@ public class Player_Command : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
 
-        if (rb.velocity.y < 0)
+        
+        if (isGrounded == true)
         {
-            Anim.SetBool("Fall", true);
-        } 
-        else
-        {
-            Anim.SetBool("Fall", false);
+            Anim.SetBool("Jump", false);
         }
 
         if (moveInput != 0)
@@ -74,19 +71,16 @@ public class Player_Command : MonoBehaviour
             }
         }
 
-
-
-
         // saut
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button0) && isGrounded)
         {
-            Anim.SetTrigger("Jump");
+            Anim.SetBool("Jump",true);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            Anim.SetTrigger("Jump");
+            Anim.SetBool("Jump",true);
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
     }
